@@ -16,21 +16,46 @@
     <div id="game-window" class="d-flex flex-column justify-content-between">
         <header class="bg-warning">
             <div id="pname-add" class="d-flex justify-content-center">
-                <form>
-                    <textarea id="add-name" class= "w-50" placeholder="Enter player name"></textarea>
-                    <input class="btn waves-effect waves-light" type="submit" id="submit">Create PLayer
+                <form id=name-form>
+                    <textarea id="player-name" class="w-50" placeholder="Enter player name"></textarea>
+                    <input class="btn waves-effect waves-light" type="submit" id="add-name">Create Player
                     </input>
                 </form>
             </div>
+        </header>
+        <div class="row">
+            <!-- Player 1 Info Display -->
             <div class="d-flex justify-content-between">
-                <div id="p1-name text-center" class="px-5">
+                <div id="p1-name" class="px-5 text-center">
                     <h2>Player 1</h2>
                 </div>
-                <div id="p2-name" class="px-5">
+                <div id="p1-content">
+                    <div class="btn-md">Rock</div>
+                    <br>
+                    <div class="btn-md">Paper</div>
+                    <br>
+                    <div class="btn-md">Scissors</div>
+                </div>
+                <div class="panel-body text-center">
+                    <div id="p1-stats" class="stats"></div>
+                </div>
+                <!-- Player 2 Info Display -->
+                <div id="p2-name" class="px-5 text-center">
                     <h2>Player 2</h2>
                 </div>
+                <div id="p2-content">
+                    <div class="btn-md">Rock</div>
+                    <br>
+                    <div class="btn-md">Paper</div>
+                    <br>
+                    <div class="btn-md">Scissors</div>
+                </div>
+                <div class="panel-body text-center">
+                    <div id="p2-stats" class="stats"></div>
+                </div>
             </div>
-        </header>
+        </div>
+
         <div id="game-play" class="flex-grow-1 border-primary border shadow w-100 d-flex justify-content-around">
             <div id="game-view" class="align-self-center text-light text-center" data-screen="start">
                 <h2 data-bind="title"></h2>
@@ -53,12 +78,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
 
-    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
